@@ -1,0 +1,27 @@
+[
+    {
+        "id": "123",
+        "authorId": "1234567890",
+        "postContent": "I really like eating hamburgers"
+    },
+    {
+        "id": "124",
+        "authorId": "1231231231",
+        "postContent": "I really like eating hamburgers and hotdogs"
+    },
+    {
+        "id": "123",
+        "authorId": "1231234231",
+        "postContent": "I dont really like eating hamburgers"
+    },
+    {
+        "id": "123",
+        "authorId": "1244231231",
+        "postContent": "I really like eating hotdogs"
+    },
+    {
+        "id": "123",
+        "authorId": "1231233551",
+        "postContent": "I really like eating hamburgers but without cheese"
+    }
+]
