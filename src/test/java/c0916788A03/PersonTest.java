@@ -9,16 +9,16 @@ public class PersonTest {
     public void testValidPerson() {
         Person person = Person.builder()
                 .id("1")
-                .firstName("John")
-                .lastName("Doe")
+                .firstName("Darshan")
+                .lastName("Gautam")
                 .age(30)
                 .gender("Male")
                 .build();
         
         assertNotNull(person);
         assertEquals("1", person.getId());
-        assertEquals("John", person.getFirstName());
-        assertEquals("Doe", person.getLastName());
+        assertEquals("Darshan", person.getFirstName());
+        assertEquals("Gautam", person.getLastName());
         assertEquals(30, person.getAge());
         assertEquals("Male", person.getGender());
     }
@@ -27,10 +27,10 @@ public class PersonTest {
     public void testNullIdThrowsException() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             Person.builder()
-                    .firstName("Jane")
-                    .lastName("Doe")
+                    .firstName("Darshan")
+                    .lastName("Gautam")
                     .age(25)
-                    .gender("Female")
+                    .gender("Male")
                     .build();
         });
         assertEquals("ID cannot be null", exception.getMessage());
@@ -42,9 +42,9 @@ public class PersonTest {
             Person.builder()
                     .id("2")
                     .firstName("")
-                    .lastName("Doe")
+                    .lastName("Gautam")
                     .age(25)
-                    .gender("Female")
+                    .gender("Male")
                     .build();
         });
         assertEquals("First name cannot be null or blank", exception.getMessage());
@@ -55,8 +55,8 @@ public class PersonTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             Person.builder()
                     .id("3")
-                    .firstName("John")
-                    .lastName("Doe")
+                    .firstName("Darshan")
+                    .lastName("Gautam")
                     .age(-1)
                     .gender("Male")
                     .build();
@@ -69,10 +69,10 @@ public class PersonTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             Person.builder()
                     .id("4")
-                    .firstName("Jane")
+                    .firstName("Darshan")
                     .lastName(" ")
                     .age(25)
-                    .gender("Female")
+                    .gender("Male")
                     .build();
         });
         assertEquals("Last name cannot be null or blank", exception.getMessage());
